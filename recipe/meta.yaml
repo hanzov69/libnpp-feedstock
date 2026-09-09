@@ -13,6 +13,10 @@
 {% set target_name = "arm64" %}  # [win and arm64]
 {% set extension = "tar.xz" %}  # [not win]
 {% set extension = "zip" %}  # [win]
+{% set sha256 = "94deca82955341613a6f796ccfa8057cf9dc4162203b7c84471407768f655832" %}  # [linux64]
+{% set sha256 = "ed2fe3afa54425909db8e24d6171c2e059990e5575071f18f199251147d4bb9e" %}  # [aarch64]
+{% set sha256 = "39ed6d59754c654611c0e0527d5ea839d665d50fe4181908269ef26c1741a8f4" %}  # [win64]
+{% set sha256 = "95e1c497c4e9fffc761e35cb65cc4289c165356ab5922818b7c6bf5c516e6b32" %}  # [win and arm64]
 
 package:
   name: {{ name|lower }}-split
@@ -20,10 +24,7 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/{{ name }}/{{ platform }}/{{ name }}-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: 94deca82955341613a6f796ccfa8057cf9dc4162203b7c84471407768f655832  # [linux64]
-  sha256: ed2fe3afa54425909db8e24d6171c2e059990e5575071f18f199251147d4bb9e  # [aarch64]
-  sha256: 39ed6d59754c654611c0e0527d5ea839d665d50fe4181908269ef26c1741a8f4  # [win64]
-  sha256: 95e1c497c4e9fffc761e35cb65cc4289c165356ab5922818b7c6bf5c516e6b32  # [win and arm64]
+  sha256: {{ sha256 }}
 
 build:
   number: 0
