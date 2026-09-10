@@ -47,73 +47,31 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-How to use
-----------
-
-<details>
-<summary>With conda</summary>
+Once the `conda-forge` channel has been enabled, `libnpp, libnpp-dev, libnpp-static` can be installed with `conda`:
 
 ```
 conda install libnpp libnpp-dev libnpp-static
 ```
 
-</details>
-
-<details>
-<summary>With mamba</summary>
+or with `mamba`:
 
 ```
 mamba install libnpp libnpp-dev libnpp-static
 ```
 
-</details>
-
-<details>
-<summary>With pixi</summary>
-
-```
-# for adding to your local project
-pixi add libnpp libnpp-dev libnpp-static
-# for installing globally
-pixi global install libnpp libnpp-dev libnpp-static
-```
-
-</details>
-
-Search package versions
------------------------
-
-It is possible to list all of the versions of `libnpp` available on your platform:
-
-<details>
-<summary>With conda</summary>
+It is possible to list all of the versions of `libnpp` available on your platform with `conda`:
 
 ```
 conda search libnpp --channel conda-forge
 ```
 
-</details>
-
-<details>
-<summary>With mamba</summary>
+or with `mamba`:
 
 ```
 mamba search libnpp --channel conda-forge
 ```
 
-</details>
-
-<details>
-<summary>With pixi</summary>
-
-```
-pixi search libnpp --channel conda-forge
-```
-
-</details>
-
-<details>
-<summary>With mamba repoquery, which may provide more information</summary>
+Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
@@ -125,8 +83,6 @@ mamba repoquery whoneeds libnpp --channel conda-forge
 # List dependencies of `libnpp`:
 mamba repoquery depends libnpp --channel conda-forge
 ```
-
-</details>
 
 
 About conda-forge
